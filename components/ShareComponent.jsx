@@ -38,78 +38,14 @@ function ShareComponent() {
         <p>SHARETHIS BUTTON</p>
         <div className="sharethis-inline-share-buttons"></div>
       </div> */}
-      <h2>AddThis Library</h2>
-      <button onClick={() => setOpen(!open)}>Open AddThis Links</button>
-      {open ? (
-        <div style={{ width: "60%", margin: "0 auto" }}>
-          <p>
-            <a
-              href="https://www.addthis.com/"
-              target="_blank"
-              rel="noreferrer"
-              style={{
-                textDecoration: "underline",
-                cursor: "pointer",
-                color: "#10a9d8",
-              }}
-            >
-              AddThis
-            </a>{" "}
-            Library - Share buttons customized{" "}
-          </p>
-          <Modal>
-            <div className="addthis_sharing_toolbox">
-              <div className="custom_images">
-                <ShareLinksWrapper>
-                  <ShareLinksGroup>
-                    <ShareLinks className="addthis_button_link">
-                      <CopyLink alt="Copy Link" />
-                      <ShareLinksText>COPY LINK</ShareLinksText>
-                    </ShareLinks>
-                    <ShareLinks className="addthis_button_whatsapp">
-                      <WhatsappShareLink alt="Share to Whatsapp" />
-                      <ShareLinksText>WHATSAPP</ShareLinksText>
-                    </ShareLinks>
-                    <ShareLinks className="addthis_button_skype">
-                      <SkypeShareLink alt="Share to Skype" />
-                      <ShareLinksText>SKYPE</ShareLinksText>
-                    </ShareLinks>
-                  </ShareLinksGroup>
-                  <ShareLinksGroup>
-                    <ShareLinks className="addthis_button_facebook">
-                      <FacebookShareLink alt="Share to Facebook" />
-                      <ShareLinksText>FACEBOOK</ShareLinksText>
-                    </ShareLinks>
-                    <ShareLinks
-                      className="addthis_button_messenger"
-                      addthis:url="http://example.com"
-                      addthis:title="An excellent website"
-                    >
-                      <MessengerShareLink />
-                      <ShareLinksText>MESSENGER</ShareLinksText>
-                    </ShareLinks>
-                    <ShareLinks className="addthis_button_telegram">
-                      <TelegramShareLink alt="Share to Telegram" />
-                      <ShareLinksText>TELEGRAM</ShareLinksText>
-                    </ShareLinks>
-                  </ShareLinksGroup>
-                </ShareLinksWrapper>
-              </div>
-            </div>
-          </Modal>
-        </div>
-      ) : null}
-      <h2>AddToAny Library</h2>
-      <div style={{ padding: "1rem 0" }}>
-        <button onClick={() => setOpenA2A(!openA2A)}>
-          Open AddToAny Links
-        </button>
-
-        {openA2A ? (
+      <div style={{ display: "none" }}>
+        <h2>AddThis Library - Buttons customized</h2>
+        <button onClick={() => setOpen(!open)}>Open AddThis Links</button>
+        {open ? (
           <div style={{ width: "60%", margin: "0 auto" }}>
             <p>
               <a
-                href="https://www.addtoany.com"
+                href="https://www.addthis.com/"
                 target="_blank"
                 rel="noreferrer"
                 style={{
@@ -118,68 +54,133 @@ function ShareComponent() {
                   color: "#10a9d8",
                 }}
               >
-                AddToAny
+                AddThis
               </a>{" "}
               Library - Share buttons customized{" "}
             </p>
             <Modal>
-              <div
-                className="a2a_kit a2a_kit_size_32 a2a_default_style"
-                data-a2a-url="http://www.example.com/page.html"
-                data-a2a-title="Corcoran"
-              >
-                <ShareLinksWrapper>
-                  <ShareLinksGroup>
-                    <ShareLinks className="a2a_button_copy_link">
-                      <CopyLink alt="Copy Link" />
-                      <ShareLinksText>COPY LINK</ShareLinksText>
-                    </ShareLinks>
-                    <ShareLinks className="a2a_button_whatsapp">
-                      <WhatsappShareLink alt="Share to Whatsapp" />
-                      <ShareLinksText>WHATSAPP</ShareLinksText>
-                    </ShareLinks>
-                    <ShareLinks className="a2a_button_skype">
-                      <SkypeShareLink alt="Share to Skype" />
-                      <ShareLinksText>SKYPE</ShareLinksText>
-                    </ShareLinks>
-                  </ShareLinksGroup>
-                  <ShareLinksGroup>
-                    <ShareLinks className="a2a_button_facebook">
-                      <FacebookShareLink alt="Share to Facebook" />
-                      <ShareLinksText>FACEBOOK</ShareLinksText>
-                    </ShareLinks>
-                    <ShareLinks className="a2a_button_facebook_messenger">
-                      <MessengerShareLink />
-                      <ShareLinksText>MESSENGER</ShareLinksText>
-                    </ShareLinks>
-
-                    <ShareLinks
-                      className="a2a_button_telegram"
-                      href="https://www.corcoran.com/homes-for-sale/474-middle-line-highway-bridgehampton-ny-11932/6418974/regionId=3?WebID=885241"
-                    >
-                      <TelegramShareLink alt="Share to Telegram" />
-                      <ShareLinksText>TELEGRAM</ShareLinksText>
-                    </ShareLinks>
-                  </ShareLinksGroup>
-                </ShareLinksWrapper>
+              <div className="addthis_sharing_toolbox">
+                <div className="custom_images">
+                  <ShareLinksWrapper>
+                    <ShareLinksGroup>
+                      <ShareLinks className="addthis_button_link">
+                        <CopyLink alt="Copy Link" />
+                        <ShareLinksText>COPY LINK</ShareLinksText>
+                      </ShareLinks>
+                      <ShareLinks className="addthis_button_whatsapp">
+                        <WhatsappShareLink alt="Share to Whatsapp" />
+                        <ShareLinksText>WHATSAPP</ShareLinksText>
+                      </ShareLinks>
+                      <ShareLinks className="addthis_button_skype">
+                        <SkypeShareLink alt="Share to Skype" />
+                        <ShareLinksText>SKYPE</ShareLinksText>
+                      </ShareLinks>
+                    </ShareLinksGroup>
+                    <ShareLinksGroup>
+                      <ShareLinks className="addthis_button_facebook">
+                        <FacebookShareLink alt="Share to Facebook" />
+                        <ShareLinksText>FACEBOOK</ShareLinksText>
+                      </ShareLinks>
+                      <ShareLinks
+                        className="addthis_button_messenger"
+                        addthis:url="http://example.com"
+                        addthis:title="An excellent website"
+                      >
+                        <MessengerShareLink />
+                        <ShareLinksText>MESSENGER</ShareLinksText>
+                      </ShareLinks>
+                      <ShareLinks className="addthis_button_telegram">
+                        <TelegramShareLink alt="Share to Telegram" />
+                        <ShareLinksText>TELEGRAM</ShareLinksText>
+                      </ShareLinks>
+                    </ShareLinksGroup>
+                  </ShareLinksWrapper>
+                </div>
               </div>
             </Modal>
           </div>
         ) : null}
+        <div style={{ display: "none" }}>
+          <h2>AddToAny Library</h2>
+          <div style={{ padding: "1rem 0" }}>
+            <button onClick={() => setOpenA2A(!openA2A)}>
+              Open AddToAny Links
+            </button>
+
+            {openA2A ? (
+              <div style={{ width: "60%", margin: "0 auto" }}>
+                <p>
+                  <a
+                    href="https://www.addtoany.com"
+                    target="_blank"
+                    rel="noreferrer"
+                    style={{
+                      textDecoration: "underline",
+                      cursor: "pointer",
+                      color: "#10a9d8",
+                    }}
+                  >
+                    AddToAny
+                  </a>{" "}
+                  Library - Share buttons customized{" "}
+                </p>
+                <Modal>
+                  <div
+                    className="a2a_kit a2a_kit_size_32 a2a_default_style"
+                    data-a2a-url="http://www.example.com/page.html"
+                    data-a2a-title="Corcoran"
+                  >
+                    <ShareLinksWrapper>
+                      <ShareLinksGroup>
+                        <ShareLinks className="a2a_button_copy_link">
+                          <CopyLink alt="Copy Link" />
+                          <ShareLinksText>COPY LINK</ShareLinksText>
+                        </ShareLinks>
+                        <ShareLinks className="a2a_button_whatsapp">
+                          <WhatsappShareLink alt="Share to Whatsapp" />
+                          <ShareLinksText>WHATSAPP</ShareLinksText>
+                        </ShareLinks>
+                        <ShareLinks className="a2a_button_skype">
+                          <SkypeShareLink alt="Share to Skype" />
+                          <ShareLinksText>SKYPE</ShareLinksText>
+                        </ShareLinks>
+                      </ShareLinksGroup>
+                      <ShareLinksGroup>
+                        <ShareLinks className="a2a_button_facebook">
+                          <FacebookShareLink alt="Share to Facebook" />
+                          <ShareLinksText>FACEBOOK</ShareLinksText>
+                        </ShareLinks>
+                        <ShareLinks className="a2a_button_facebook_messenger">
+                          <MessengerShareLink />
+                          <ShareLinksText>MESSENGER</ShareLinksText>
+                        </ShareLinks>
+
+                        <ShareLinks className="a2a_button_telegram">
+                          <TelegramShareLink alt="Share to Telegram" />
+                          <ShareLinksText>TELEGRAM</ShareLinksText>
+                        </ShareLinks>
+                      </ShareLinksGroup>
+                    </ShareLinksWrapper>
+                  </div>
+                </Modal>
+              </div>
+            ) : null}
+          </div>
+        </div>
       </div>
       <div style={{ padding: "1rem 0" }}>
-        <h2>Default Buttons</h2>
+        {/* <h2>Default Buttons</h2> */}
         <div>
-          <h3>Addthis</h3>
+          <h3>Addthis - Default buttons</h3>
           <div className="addthis_inline_share_toolbox"></div>
         </div>
-        <div>
+        {/* <div>
           <h3>AddToAny</h3>
           <div className="a2a_kit a2a_kit_size_32 a2a_default_style">
             <a className="a2a_button_whatsapp"></a>
             <a className="a2a_button_facebook_messenger"></a>
           </div>
-        </div>
+        </div> */}
       </div>
 
       {/* <div style={{ padding: "1rem 0" }}>
