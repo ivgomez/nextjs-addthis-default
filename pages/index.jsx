@@ -25,9 +25,14 @@ export default function Home() {
           data-telegram-share-url="https://nextjs-addthis-k70scbjjn-ivgomez.vercel.app/"
           data-comment="check this out"
         />
-        <script
+        {/* <script
           type="text/javascript"
           src="https://platform-api.sharethis.com/js/sharethis.js#property=61e75019aa3f60001954c28c&product=sop"
+          async="async"
+        /> */}
+        <script
+          type="text/javascript"
+          src="https://platform-api.sharethis.com/js/sharethis.js#property=61f81cc7ca74b10019d77fe3&product=inline-share-buttons"
           async="async"
         />
       </Head>

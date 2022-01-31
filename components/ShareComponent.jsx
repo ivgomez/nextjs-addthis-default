@@ -174,12 +174,17 @@ function ShareComponent() {
           <h3>Addthis Library - Default buttons</h3>
           <div className="addthis_inline_share_toolbox"></div>
         </div>
-        <div>
+        <div style={{ padding: "2rem 0" }}>
           <h3>AddToAny Library - Default buttons</h3>
           <div className="a2a_kit a2a_kit_size_32 a2a_default_style">
             <a className="a2a_button_sms"></a>
             <a className="a2a_button_email"></a>
           </div>
+        </div>
+        <div style={{ padding: "2rem 0" }}>
+          <h3>ShareThis Library - Default buttons</h3>
+          <div className="sharethis-inline-share-buttons"></div>
+          <div className="sharethis-inline-follow-buttons"></div>
         </div>
       </div>
 
