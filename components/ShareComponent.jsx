@@ -29,8 +29,6 @@ function ShareComponent() {
     addthisViewEvent();
   }, [open, openA2A]);
 
-  const urlLink =
-    "https://www.corcoran.com/homes-for-sale/474-middle-line-highway-bridgehampton-ny-11932/6418974/regionId=3?WebID=885241";
   return (
     <div style={{ width: "90%", margin: "0 auto" }}>
       <h1>SHARE BUTTONS LIBRARIES - EXAMPLES FOR REACT JS/NEXT.js</h1>
