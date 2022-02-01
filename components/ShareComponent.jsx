@@ -182,7 +182,10 @@ function ShareComponent() {
         <div style={{ padding: "2rem 0" }}>
           <h3>ShareThis Library - Default buttons</h3>
           <div className="sharethis-inline-share-buttons"></div>
-          <div className="sharethis-inline-follow-buttons"></div>
+          <div
+            className="sharethis-inline-follow-buttons"
+            style={{ padding: "1rem 0" }}
+          ></div>
         </div>
       </div>
 
