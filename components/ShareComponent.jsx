@@ -20,6 +20,10 @@ function ShareComponent() {
     if (window?.addthis) {
       window.addthis.toolbox(".addthis_sharing_toolbox");
     }
+    if (window?.st) {
+      console.log("object", window.st);
+      window.st.initialize();
+    }
     // if (window.a2a) {
     //   console.log("object", window);
     //   window.a2a.init_all();
@@ -28,7 +32,7 @@ function ShareComponent() {
 
   useEffect(() => {
     addthisViewEvent();
-    console.log("object", window);
+    //console.log("object", window);
   }, [open, openA2A]);
 
   return (
@@ -102,7 +106,8 @@ function ShareComponent() {
                 <h3>ShareThis Library - Tik Tok</h3>
                 <div
                   className="sharethis-inline-follow-buttons"
-                  data-url="https://www.tiktok.com/@corcorangroup/video/7060539578247302447?is_from_webapp=1&sender_device=pc&web_id7041204526691960325"
+                  data-title="Follow us on Tik Tok"
+                  data-url="@corcorangroup/video/7059864242601823535?is_from_webapp=1&sender_device=pc&web_id7041204526691960325"
                   style={{ padding: "1rem 0" }}
                 ></div>
               </div>
@@ -190,7 +195,7 @@ function ShareComponent() {
             <a className="a2a_button_email"></a>
           </div>
         </div>
-        <div style={{ padding: "2rem 1rem" }}>
+        <div style={{ padding: "2rem 1rem", display: "block" }}>
           <h3>ShareThis Library - Tik Tok</h3>
           {/* <div className="sharethis-inline-share-buttons"></div> */}
           <div
