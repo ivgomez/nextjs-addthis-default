@@ -16,17 +16,19 @@ function ShareComponent() {
   a2a_config.templates = a2a_config.templates || {};
 
   const addthisViewEvent = () => {
+    window.a2a.init_all();
     if (window?.addthis) {
       window.addthis.toolbox(".addthis_sharing_toolbox");
     }
-    if (window.a2a) {
-      console.log("object", window);
-      window.a2a.init_all();
-    }
+    // if (window.a2a) {
+    //   console.log("object", window);
+    //   window.a2a.init_all();
+    // }
   };
 
   useEffect(() => {
     addthisViewEvent();
+    console.log("object", window);
   }, [open, openA2A]);
 
   return (
@@ -36,9 +38,9 @@ function ShareComponent() {
         <p>SHARETHIS BUTTON</p>
         <div className="sharethis-inline-share-buttons"></div>
       </div> */}
-      <div style={{ display: "none" }}>
+      <div style={{ display: "block" }}>
         <h2>AddThis Library - Buttons customized</h2>
-        <button onClick={() => setOpen(!open)}>Open AddThis Links</button>
+        <button onClick={() => setOpen(!open)}>Simulate modal</button>
         {open ? (
           <div style={{ width: "60%", margin: "0 auto" }}>
             <p>
@@ -94,6 +96,15 @@ function ShareComponent() {
                     </ShareLinksGroup>
                   </ShareLinksWrapper>
                 </div>
+              </div>
+
+              <div style={{ padding: "0 1rem" }}>
+                <h3>ShareThis Library - Tik Tok</h3>
+                <div
+                  className="sharethis-inline-follow-buttons"
+                  data-url="https://www.tiktok.com/@corcorangroup/video/7060539578247302447?is_from_webapp=1&sender_device=pc&web_id7041204526691960325"
+                  style={{ padding: "1rem 0" }}
+                ></div>
               </div>
             </Modal>
           </div>
@@ -168,20 +179,20 @@ function ShareComponent() {
       </div>
       <div style={{ padding: "1rem 0" }}>
         {/* <h2>Default Buttons</h2> */}
-        <div>
+        <div style={{ display: "none" }}>
           <h3>Addthis Library - Default buttons</h3>
           <div className="addthis_inline_share_toolbox"></div>
         </div>
-        <div style={{ padding: "2rem 0" }}>
+        <div style={{ padding: "2rem 0", display: "none" }}>
           <h3>AddToAny Library - Default buttons</h3>
           <div className="a2a_kit a2a_kit_size_32 a2a_default_style">
             <a className="a2a_button_sms"></a>
             <a className="a2a_button_email"></a>
           </div>
         </div>
-        <div style={{ padding: "2rem 0" }}>
-          <h3>ShareThis Library - Default buttons</h3>
-          <div className="sharethis-inline-share-buttons"></div>
+        <div style={{ padding: "2rem 1rem" }}>
+          <h3>ShareThis Library - Tik Tok</h3>
+          {/* <div className="sharethis-inline-share-buttons"></div> */}
           <div
             className="sharethis-inline-follow-buttons"
             style={{ padding: "1rem 0" }}
