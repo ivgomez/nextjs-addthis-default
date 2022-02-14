@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import Link from "next/link";
 import styled from "styled-components";
 import { breakpoint } from "./theme";
 import CopyLink from "../pages/images/CopyLink";
@@ -271,21 +272,19 @@ function ShareComponent(props) {
                         data-title="Tiktok"
                         data-url="@corcorangroup/video/7059864242601823535?is_from_webapp=1&sender_device=pc&web_id7041204526691960325"
                       />
-                      <ShareLinks
+                      <Link
                         href="https://www.tiktok.com/@corcorangroup"
                         target="_blank"
-                        rel="noreferrer"
+                        passHref
                       >
-                        <TelegramShareLink alt="Share to Telegram" />
-                        <ShareLinksText>TIKTOK LINK</ShareLinksText>
-                      </ShareLinks>
-                      <ShareLinks
+                        <a>TIKTOK LINK NEW TAB</a>
+                      </Link>
+                      <Link
                         href="https://www.tiktok.com/@corcorangroup"
-                        rel="noreferrer"
+                        passHref
                       >
-                        <TelegramShareLink alt="Share to Telegram" />
-                        <ShareLinksText>TIKTOK LINK</ShareLinksText>
-                      </ShareLinks>
+                        <a>TIKTOK LINK</a>
+                      </Link>
                     </ShareLinksGroup>
                   </ShareLinksWrapper>
                 </Modal>
