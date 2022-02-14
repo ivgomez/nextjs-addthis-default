@@ -281,7 +281,6 @@ function ShareComponent(props) {
                       </ShareLinks>
                       <ShareLinks
                         href="https://www.tiktok.com/@corcorangroup"
-                        target="_blank"
                         rel="noreferrer"
                       >
                         <TelegramShareLink alt="Share to Telegram" />
