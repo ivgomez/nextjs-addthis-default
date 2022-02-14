@@ -9,34 +9,48 @@ import MessengerShareLink from "../pages/images/MessengerShareLink";
 import TelegramShareLink from "../pages/images/TelegramShareLink";
 import SMSShareLink from "../pages/images/SMSShareLink";
 
-function ShareComponent() {
-  const [open, setOpen] = useState(false);
-  const [openA2A, setOpenA2A] = useState(false);
-  const [openST, setOpenST] = useState(false);
+function ShareComponent(props) {
+  const {
+    open,
+    openA2A,
+    setOpenA2A,
+    customA2A,
+    openST,
+    setOpenST,
+    handleOpenAddthis,
+    handleCloseAddthis,
+    handleOpenA2A,
+    handleCloseA2A,
+  } = props;
 
   var a2a_config = a2a_config || {};
   a2a_config.templates = a2a_config.templates || {};
 
   const addthisViewEvent = () => {
-    window.a2a.init_all();
     if (window?.addthis) {
-      //console.log("addthis", window.addthis);
+      console.log("window", window);
       window.addthis.toolbox(".addthis_sharing_toolbox");
     }
     if (window?.a2a) {
-      //console.log("a2a", window.a2a);
+      //console.log("a2a", window);
       window.a2a.init_all();
+      a2a_config.linkurl = customA2A;
     }
     if (window?.st) {
-      console.log("st", window.st);
+      //console.log("st", window.st);
       window.st.initialize();
     }
   };
 
   useEffect(() => {
     addthisViewEvent();
-    //console.log("object", window);
-  }, [open, openA2A, openST]);
+  }, [open, openA2A, openST, customA2A]);
+
+  useEffect(() => {
+    if (customA2A) {
+      setOpenA2A(!openA2A);
+    }
+  }, [customA2A]);
 
   return (
     <div style={{ width: "90%", margin: "0 auto" }}>
@@ -45,9 +59,9 @@ function ShareComponent() {
       <div style={{ display: "block" }}>
         <div style={{ display: "block" }}>
           <h2>AddThis Library - Buttons customized</h2>
-          <button onClick={() => setOpen(!open)}>
-            Simulating a modal open/close
-          </button>
+          <button onClick={handleOpenAddthis}>open modal</button>
+          &nbsp;
+          <button onClick={handleCloseAddthis}>close modal</button>
           {open ? (
             <div style={{ width: "60%", margin: "0 auto" }}>
               <p>
@@ -66,7 +80,11 @@ function ShareComponent() {
                 Library - Share buttons customized{" "}
               </p>
               <Modal>
-                <div className="addthis_sharing_toolbox">
+                <div
+                  className="addthis_sharing_toolbox"
+                  data-url="THE URL"
+                  data-title="THE TITLE"
+                >
                   <div className="custom_images" style={{ display: "block" }}>
                     <ShareLinksWrapper>
                       <ShareLinksGroup>
@@ -110,12 +128,11 @@ function ShareComponent() {
         </div>
 
         <div style={{ display: "block" }}>
-          <h2>AddToAny Library</h2>
+          <h2>AddToAny Library - Buttons customized</h2>
           <div style={{ padding: "1rem 0" }}>
-            <button onClick={() => setOpenA2A(!openA2A)}>
-              Simulating a modal open/close
-            </button>
-
+            <button onClick={handleOpenA2A}>open modal</button>
+            &nbsp;
+            <button onClick={handleCloseA2A}>close modal</button>
             {openA2A ? (
               <div style={{ width: "60%", margin: "0 auto" }}>
                 <p>
@@ -136,7 +153,7 @@ function ShareComponent() {
                 <Modal>
                   <div
                     className="a2a_kit a2a_kit_size_32 a2a_default_style"
-                    data-a2a-url="http://www.example.com/page.html"
+                    //data-a2a-url={customUrl}
                     data-a2a-title="Corcoran"
                   >
                     <ShareLinksWrapper>
@@ -178,12 +195,11 @@ function ShareComponent() {
         </div>
 
         <div style={{ display: "block" }}>
-          <h2>ShareThis Library</h2>
+          <h2>ShareThis Library - Buttons customized</h2>
           <div style={{ padding: "1rem 0" }}>
-            <button onClick={() => setOpenST(!openST)}>
-              Simulating a modal open/close
-            </button>
-
+            <button onClick={() => setOpenST(true)}>open modal</button>
+            &nbsp;
+            <button onClick={() => setOpenST(false)}>close modal</button>
             {openST ? (
               <div style={{ width: "60%", margin: "0 auto" }}>
                 <p>
@@ -241,18 +257,18 @@ function ShareComponent() {
                         <TelegramShareLink alt="Share to Telegram" />
                         <ShareLinksText>TELEGRAM</ShareLinksText>
                       </ShareThisButton>
-                      <ShareThisButton
+                      {/* <ShareThisButton
                         className="st-custom-button"
                         data-network="sms"
                       >
                         <SMSShareLink alt="Share to SMS" />
                         <ShareLinksText>SMS</ShareLinksText>
-                      </ShareThisButton>
-                      {/* <TiktokShareButton
+                      </ShareThisButton> */}
+                      <TiktokShareButton
                         className="sharethis-inline-follow-buttons"
                         data-title="Tiktok"
                         data-url="@corcorangroup/video/7059864242601823535?is_from_webapp=1&sender_device=pc&web_id7041204526691960325"
-                      /> */}
+                      />
                     </ShareLinksGroup>
                   </ShareLinksWrapper>
                 </Modal>

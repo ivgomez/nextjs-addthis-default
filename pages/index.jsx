@@ -1,6 +1,6 @@
 import React from "react";
 import Head from "next/head";
-import ShareComponent from "../components/ShareComponent";
+import MainComponent from "./page-components/MainComponent";
 
 export default function Home() {
   return (
@@ -29,7 +29,7 @@ export default function Home() {
           async="async"
         />
       </Head>
-      <ShareComponent />
+      <MainComponent />
     </>
   );
 }
