@@ -257,18 +257,36 @@ function ShareComponent(props) {
                         <TelegramShareLink alt="Share to Telegram" />
                         <ShareLinksText>TELEGRAM</ShareLinksText>
                       </ShareThisButton>
-                      {/* <ShareThisButton
+                      <ShareThisButton
                         className="st-custom-button"
                         data-network="sms"
                       >
                         <SMSShareLink alt="Share to SMS" />
                         <ShareLinksText>SMS</ShareLinksText>
-                      </ShareThisButton> */}
+                      </ShareThisButton>
+                    </ShareLinksGroup>
+                    <ShareLinksGroup>
                       <TiktokShareButton
                         className="sharethis-inline-follow-buttons"
                         data-title="Tiktok"
                         data-url="@corcorangroup/video/7059864242601823535?is_from_webapp=1&sender_device=pc&web_id7041204526691960325"
                       />
+                      <ShareLinks
+                        href="https://www.tiktok.com/@corcorangroup"
+                        target="_blank"
+                        rel="noreferrer"
+                      >
+                        <TelegramShareLink alt="Share to Telegram" />
+                        <ShareLinksText>TIKTOK LINK</ShareLinksText>
+                      </ShareLinks>
+                      <ShareLinks
+                        href="https://www.tiktok.com/@corcorangroup"
+                        target="_blank"
+                        rel="noreferrer"
+                      >
+                        <TelegramShareLink alt="Share to Telegram" />
+                        <ShareLinksText>TIKTOK LINK</ShareLinksText>
+                      </ShareLinks>
                     </ShareLinksGroup>
                   </ShareLinksWrapper>
                 </Modal>
