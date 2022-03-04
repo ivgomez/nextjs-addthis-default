@@ -11,11 +11,11 @@ const MainComponent = () => {
   const handleOpenAddthis = () => {
     setOpen(true);
     //addthis.update("share", "url", "http://www.example.com");
-    addthis.update(
-      "share",
-      "media",
-      "https://mediarouting.vestahub.com/Media/93962490/box/500x500"
-    );
+    // addthis.update(
+    //   "share",
+    //   "media",
+    //   "https://mediarouting.vestahub.com/Media/93962490/box/500x500"
+    // );
   };
 
   const handleCloseAddthis = () => {
