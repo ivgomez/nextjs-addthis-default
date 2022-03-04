@@ -31,8 +31,8 @@ function ShareComponent(props) {
     if (window?.addthis) {
       console.log("window", window);
       window.addthis.toolbox(".addthis_sharing_toolbox");
-      window.addthis_share.media =
-        "https://mediarouting.vestahub.com/Media/93962490/box/500x500";
+      // window.addthis_share.media =
+      //   "https://mediarouting.vestahub.com/Media/93962490/box/500x500";
     }
     if (window?.a2a) {
       //console.log("a2a", window);
