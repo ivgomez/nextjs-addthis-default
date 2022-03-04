@@ -10,7 +10,7 @@ const MainComponent = () => {
 
   const handleOpenAddthis = () => {
     setOpen(true);
-    addthis.update("share", "url", "http://www.example.com");
+    //addthis.update("share", "url", "http://www.example.com");
   };
 
   const handleCloseAddthis = () => {
