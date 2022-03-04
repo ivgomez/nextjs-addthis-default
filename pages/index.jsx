@@ -8,7 +8,7 @@ export default function Home() {
       <Head>
         <meta
           property="og:image"
-          content="//mediarouting.vestahub.com/Media/114364984/box/500x500"
+          content="https://mediarouting.vestahub.com/Media/93962490/box/500x500"
         />
         {/* <!-- Go to www.addthis.com/dashboard to customize your tools --> */}
         <link
