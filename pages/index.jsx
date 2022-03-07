@@ -8,7 +8,7 @@ export default function Home() {
       <Head>
         <meta
           property="og:image"
-          content="https://mediarouting.vestahub.com/Media/93962490/box/500x500"
+          content="https://res.cloudinary.com/corcoran-dryrmqrbg/image/upload/f_auto,q_auto,c_scale,dpr_auto,w_200/AgentApi/Realogy/EF44F2ED-E6B7-4572-90F1-32E8D7BA3C45/DA79718A-1925-4821-B638-CE7D321D6914.jpg"
         />
         {/* <!-- Go to www.addthis.com/dashboard to customize your tools --> */}
         <link
