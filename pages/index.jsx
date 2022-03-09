@@ -8,10 +8,10 @@ export default function Home() {
       <Head>
         <meta
           property="og:image"
-          content="https://res.cloudinary.com/corcoran-dryrmqrbg/image/upload/f_auto,q_auto,c_scale,dpr_auto,w_180,h_200/AgentApi/Realogy/3ACD48C9-0A47-49B2-90D2-BBBE5E695A7E/A1A1EE65-597C-4F5F-A3E0-A749897B3D07.jpg"
+          content="https://res.cloudinary.com/corcoran-dryrmqrbg/image/upload/AgentApi/Realogy/EF44F2ED-E6B7-4572-90F1-32E8D7BA3C45/DA79718A-1925-4821-B638-CE7D321D6914.jpg"
         />
-        <meta property="og:image:width" content="600" />
-        <meta property="og:image:height" content="314" />
+        <meta property="og:image:width" content="180" />
+        <meta property="og:image:height" content="210" />
         {/* <!-- Go to www.addthis.com/dashboard to customize your tools --> */}
         <link
           rel="stylesheet"
