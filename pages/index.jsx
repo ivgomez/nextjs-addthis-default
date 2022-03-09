@@ -10,8 +10,7 @@ export default function Home() {
           property="og:image"
           content="https://res.cloudinary.com/corcoran-dryrmqrbg/image/upload/AgentApi/Realogy/3ACD48C9-0A47-49B2-90D2-BBBE5E695A7E/A1A1EE65-597C-4F5F-A3E0-A749897B3D07.jpg"
         />
-        <meta property="og:image:width" content="600" />
-        <meta property="og:image:height" content="314" />
+        <meta property="og:image" content="image-600x315.jpg " />
         {/* <!-- Go to www.addthis.com/dashboard to customize your tools --> */}
         <link
           rel="stylesheet"
