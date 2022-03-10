@@ -130,7 +130,7 @@ function ShareComponent(props) {
           ) : null}
         </div>
 
-        <div style={{ display: "block" }}>
+        <div style={{ display: "none" }}>
           <h2>AddToAny Library - Buttons customized</h2>
           <div style={{ padding: "1rem 0" }}>
             <button onClick={handleOpenA2A}>open modal</button>
@@ -197,7 +197,7 @@ function ShareComponent(props) {
           </div>
         </div>
 
-        <div style={{ display: "block" }}>
+        <div style={{ display: "none" }}>
           <h2>ShareThis Library - Buttons customized</h2>
           <div style={{ padding: "1rem 0" }}>
             <button onClick={() => setOpenST(true)}>open modal</button>
