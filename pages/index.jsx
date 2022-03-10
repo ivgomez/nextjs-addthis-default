@@ -6,10 +6,10 @@ export default function Home() {
   return (
     <>
       <Head>
-        {/* <meta
+        <meta
           property="og:image"
           content="https://res.cloudinary.com/corcoran-dryrmqrbg/image/upload/AgentApi/Realogy/3ACD48C9-0A47-49B2-90D2-BBBE5E695A7E/A1A1EE65-597C-4F5F-A3E0-A749897B3D07.jpg"
-        /> */}
+        />
         <meta
           name="twitter:image"
           content="https://res.cloudinary.com/corcoran-dryrmqrbg/image/upload/AgentApi/Realogy/3ACD48C9-0A47-49B2-90D2-BBBE5E695A7E/A1A1EE65-597C-4F5F-A3E0-A749897B3D07.jpg"
