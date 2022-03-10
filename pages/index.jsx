@@ -11,8 +11,8 @@ export default function Home() {
           content="https://res.cloudinary.com/corcoran-dryrmqrbg/image/upload/f_auto,q_auto,c_scale,dpr_auto,w_200/AgentApi/Realogy/3ACD48C9-0A47-49B2-90D2-BBBE5E695A7E/A1A1EE65-597C-4F5F-A3E0-A749897B3D07.jpg"
         />
         <meta name="twitter:card" content="summary" />
-        {/* <meta property="og:image:width" content="180" />
-        <meta property="og:image:height" content="210" /> */}
+        <meta property="og:image:width" content="200" />
+        <meta property="og:image:height" content="20" />
         {/* <!-- Go to www.addthis.com/dashboard to customize your tools --> */}
         <link
           rel="stylesheet"
