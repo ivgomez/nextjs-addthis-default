@@ -8,13 +8,8 @@ export default function Home() {
       <Head>
         <meta
           property="og:image"
-          content="https://res.cloudinary.com/corcoran-dryrmqrbg/image/upload/AgentApi/Realogy/A3A983A8-C3F1-454A-93F2-997DD3F37CA3/5B6A64F5-AC99-4413-BF28-18DC4FAB4D6C.jpg"
-        />
-        <meta
-          name="twitter:image"
           content="https://res.cloudinary.com/corcoran-dryrmqrbg/image/upload/AgentApi/Realogy/3ACD48C9-0A47-49B2-90D2-BBBE5E695A7E/A1A1EE65-597C-4F5F-A3E0-A749897B3D07.jpg"
         />
-
         <meta property="og:image:width" content="1024" />
         <meta property="og:image:height" content="538" />
         {/* <!-- Go to www.addthis.com/dashboard to customize your tools --> */}
