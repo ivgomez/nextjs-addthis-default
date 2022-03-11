@@ -8,7 +8,7 @@ export default function Home() {
       <Head>
         <meta
           property="og:image"
-          content="https://res.cloudinary.com/corcoran-dryrmqrbg/image/upload/AgentApi/Realogy/3ACD48C9-0A47-49B2-90D2-BBBE5E695A7E/A1A1EE65-597C-4F5F-A3E0-A749897B3D07.jpg"
+          content="https://res.cloudinary.com/corcoran-dryrmqrbg/image/upload/AgentApi/Realogy/36462888-E69C-4F38-BEBB-C8E3E016C597/7FC05352-A76B-454F-98E1-F02794F0FF74.jpg"
         />
         {/* <meta
           property="og:image"
