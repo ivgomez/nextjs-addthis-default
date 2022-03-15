@@ -9,7 +9,7 @@ const data = [
     id: 2,
     pictureName: "Picture 2",
     pictureUrl:
-      "https://res.cloudinary.com/corcoran-dryrmqrbg/image/upload/AgentApi/Realogy/3ACD48C9-0A47-49B2-90D2-BBBE5E695A7E/A1A1EE65-597C-4F5F-A3E0-A749897B3D07.jpg",
+      "https://res.cloudinary.com/corcoran-dryrmqrbg/image/upload/c_fill,g_face,h_350,w_350/AgentApi/Realogy/3ACD48C9-0A47-49B2-90D2-BBBE5E695A7E/A1A1EE65-597C-4F5F-A3E0-A749897B3D07.jpg",
   },
   {
     id: 3,
