@@ -5,7 +5,7 @@ import MainComponent from "../page-components/MainComponent";
 
 const Home = (props) => {
   const { query: { id = 1 } = {} } = props;
-  console.log("id:", id);
+
   return (
     <>
       <Head>
