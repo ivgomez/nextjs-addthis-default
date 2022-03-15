@@ -93,9 +93,11 @@ function ShareComponent(props) {
       <div style={{ display: "block" }}>
         <div style={{ display: "block" }}>
           <h2>AddThis Library - Buttons customized</h2>
-          <button onClick={handleOpenAddthis}>open modal</button>
-          &nbsp;
-          <button onClick={handleCloseAddthis}>close modal</button>
+          <div style={{ display: "none" }}>
+            <button onClick={handleOpenAddthis}>open modal</button>
+            &nbsp;
+            <button onClick={handleCloseAddthis}>close modal</button>
+          </div>
           {open ? (
             <div style={{ width: "60%", margin: "0 auto" }}>
               <p>
