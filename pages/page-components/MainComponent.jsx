@@ -4,7 +4,7 @@ import ShareComponent from "../../components/ShareComponent";
 const MainComponent = () => {
   const [customAddThisUrl, setCustomAddThisUrl] = useState("");
   const [customA2A, setCustomA2A] = useState("");
-  const [open, setOpen] = useState(true);
+  const [open, setOpen] = useState(false);
   const [openA2A, setOpenA2A] = useState(false);
   const [openST, setOpenST] = useState(false);
 
