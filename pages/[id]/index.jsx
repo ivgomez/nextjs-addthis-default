@@ -1,6 +1,6 @@
 import React from "react";
 import Head from "next/head";
-import imageData from "./data";
+import imageData from "../../data/detailData";
 import MainComponent from "../page-components/MainComponent";
 
 export default function DetailPage(props) {
@@ -39,7 +39,7 @@ export default function DetailPage(props) {
 }
 
 export async function getServerSideProps(context) {
-  const { query, req, locale } = context;
+  const { query } = context;
 
   return {
     props: {

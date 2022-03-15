@@ -1,7 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
-import data from "./data";
+import data from "../../data/data";
 import styled from "styled-components";
 
 const AgentList = () => {
