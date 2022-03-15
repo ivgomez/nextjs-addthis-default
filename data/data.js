@@ -14,7 +14,7 @@ const data = [
   {
     id: 3,
     pictureName: "Picture 3",
-    pictureUrl: "https://mediarouting.vestahub.com/Media/114364984/box/500x500",
+    pictureUrl: "https://mediarouting.vestahub.com/Media/114364984/box/300x350",
   },
   {
     id: 4,
@@ -49,7 +49,7 @@ const data = [
   {
     id: 9,
     pictureName: "Picture 9",
-    pictureUrl: "https://mediarouting.vestahub.com/Media/98021925/box/500x500",
+    pictureUrl: "https://mediarouting.vestahub.com/Media/98021925/box/300x350",
   },
 ];
 
