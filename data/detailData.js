@@ -1,5 +1,5 @@
 const imageData = {
-  1: "https://res.cloudinary.com/corcoran-dryrmqrbg/image/upload/AgentApi/Realogy/EF44F2ED-E6B7-4572-90F1-32E8D7BA3C45/DA79718A-1925-4821-B638-CE7D321D6914.jpg",
+  1: "https://res.cloudinary.com/corcoran-dryrmqrbg/image/upload/c_fill,g_face,h_350,w_350/AgentApi/Realogy/997802F8-8CD0-4C74-A0AA-42EF4B31EFF0/84B3767C-4A67-45E4-ACDB-38F35705C5C6.jpg",
   2: "https://res.cloudinary.com/corcoran-dryrmqrbg/image/upload/AgentApi/Realogy/3ACD48C9-0A47-49B2-90D2-BBBE5E695A7E/A1A1EE65-597C-4F5F-A3E0-A749897B3D07.jpg",
   3: "https://mediarouting.vestahub.com/Media/114364984/box/350x350",
   4: "https://res.cloudinary.com/corcoran-dryrmqrbg/image/upload/c_fill,g_face,h_350,w_350/AgentApi/Realogy/EF44F2ED-E6B7-4572-90F1-32E8D7BA3C45/DA79718A-1925-4821-B638-CE7D321D6914.jpg",
