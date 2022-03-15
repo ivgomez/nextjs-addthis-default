@@ -14,7 +14,7 @@ const data = [
   {
     id: 3,
     pictureName: "Picture 3",
-    pictureUrl: "https://mediarouting.vestahub.com/Media/114364984/box/350x350",
+    pictureUrl: "https://mediarouting.vestahub.com/Media/114364984/box/500x500",
   },
   {
     id: 4,
