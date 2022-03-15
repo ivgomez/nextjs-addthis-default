@@ -1,9 +1,9 @@
 import React from "react";
 import Head from "next/head";
-import { imageData } from "./data";
+import imageData from "./data";
 import MainComponent from "../page-components/MainComponent";
 
-const DetailPage = (props) => {
+export default function DetailPage(props) {
   const { query: { id = 1 } = {} } = props;
 
   return (
@@ -36,7 +36,7 @@ const DetailPage = (props) => {
       <MainComponent />
     </>
   );
-};
+}
 
 export async function getServerSideProps(context) {
   const { query, req, locale } = context;
@@ -47,5 +47,3 @@ export async function getServerSideProps(context) {
     },
   };
 }
-
-export default DetailPage;

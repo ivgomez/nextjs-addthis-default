@@ -1,4 +1,4 @@
-export const data = [
+const data = [
   {
     id: 1,
     pictureName: "Picture 1",
@@ -47,3 +47,5 @@ export const data = [
       "https://res.cloudinary.com/corcoran-dryrmqrbg/image/upload/c_fill,g_face,h_350,w_350/AgentApi/Realogy/D5037B2E-3B6F-4829-822F-6357A8776878/9A40CC99-6360-4C1E-929E-53A3DD78B369.jpg",
   },
 ];
+
+export default data;
