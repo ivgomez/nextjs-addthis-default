@@ -1,4 +1,5 @@
-import React, { useState, useEffect } from "react";
+/* eslint-disable react-hooks/exhaustive-deps */
+import React, { useEffect } from "react";
 import Link from "next/link";
 import styled from "styled-components";
 import { breakpoint } from "./theme";
