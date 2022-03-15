@@ -3,7 +3,7 @@ import Head from "next/head";
 import { imageData } from "./data";
 import MainComponent from "../page-components/MainComponent";
 
-const Home = (props) => {
+const DetailPage = (props) => {
   const { query: { id = 1 } = {} } = props;
 
   return (
@@ -48,4 +48,4 @@ export async function getServerSideProps(context) {
   };
 }
 
-export default Home;
+export default DetailPage;

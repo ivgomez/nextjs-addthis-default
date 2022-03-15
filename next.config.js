@@ -3,5 +3,5 @@ module.exports = {
   images: {
     domains: ["res.cloudinary.com", "mediarouting.vestahub.com"],
   },
-  pageExtensions: ["page.tsx", "page.ts", "page.jsx", "page.js"],
+  //pageExtensions: ["index.tsx", "index.ts", "index.jsx", "index.js"],
 };
