@@ -33,7 +33,7 @@ export default function DetailPage(props) {
           async="async"
         />
       </Head>
-      <MainComponent />
+      <MainComponent {...props} />
     </>
   );
 }

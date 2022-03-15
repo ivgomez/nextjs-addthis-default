@@ -1,5 +1,5 @@
 /* eslint-disable react-hooks/exhaustive-deps */
-import React, { useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import styled from "styled-components";
 import { breakpoint } from "./theme";
@@ -10,6 +10,9 @@ import FacebookShareLink from "../pages/images/FacebookShareLink";
 import MessengerShareLink from "../pages/images/MessengerShareLink";
 import TelegramShareLink from "../pages/images/TelegramShareLink";
 import SMSShareLink from "../pages/images/SMSShareLink";
+import { useRouter } from "next/router";
+import Image from "next/image";
+import data from "../data/data";
 
 function ShareComponent(props) {
   const {
@@ -23,14 +26,16 @@ function ShareComponent(props) {
     handleCloseAddthis,
     handleOpenA2A,
     handleCloseA2A,
+    id,
   } = props;
+  const router = useRouter();
+  const [objData, setObjData] = useState({});
 
   var a2a_config = a2a_config || {};
   a2a_config.templates = a2a_config.templates || {};
 
   const addthisViewEvent = () => {
     if (window?.addthis) {
-      console.log("window", window);
       window.addthis.toolbox(".addthis_sharing_toolbox");
       // window.addthis_share.media =
       //   "https://mediarouting.vestahub.com/Media/93962490/box/500x500";
@@ -56,9 +61,34 @@ function ShareComponent(props) {
     }
   }, [customA2A]);
 
+  useEffect(() => {
+    if (id) {
+      const obj = data.filter((element) => element.id == id)[0];
+      setObjData(obj);
+    }
+  }, [id]);
+
   return (
     <div style={{ width: "90%", margin: "0 auto" }}>
       <h1>SHARE BUTTONS LIBRARIES - EXAMPLES FOR REACT JS/NEXT.js</h1>
+      <div style={{ textAlign: "center" }}>
+        {objData?.pictureUrl && (
+          <span>
+            <ImageWrapper
+              src={objData.pictureUrl}
+              alt={objData.pictureName}
+              layout="fixed"
+              width={150}
+              height={150}
+            />
+          </span>
+        )}
+        <div style={{ padding: "1rem 0" }}>
+          <button type="button" onClick={() => router.back()}>
+            Click here to go back
+          </button>
+        </div>
+      </div>
 
       <div style={{ display: "block" }}>
         <div style={{ display: "block" }}>
@@ -344,8 +374,6 @@ const TiktokShareButton = styled.a`
     font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
       Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
     margin-top: -10px !important;
-    }
-    }
   }
 
   img {
@@ -447,4 +475,8 @@ const ShareLinksText = styled.div`
   font-weight: 800;
   font-size: 12px;
   display: inline-block;
+`;
+
+const ImageWrapper = styled(Image)`
+  border-radius: 50%;
 `;

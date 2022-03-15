@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import ShareComponent from "../../components/ShareComponent";
 
-const MainComponent = () => {
+const MainComponent = (props) => {
+  const { query: { id = 1 } = {} } = props;
   const [customAddThisUrl, setCustomAddThisUrl] = useState("");
   const [customA2A, setCustomA2A] = useState("");
   const [open, setOpen] = useState(false);
@@ -46,6 +47,7 @@ const MainComponent = () => {
         handleOpenAddthis={handleOpenAddthis}
         handleOpenA2A={handleOpenA2A}
         handleCloseA2A={handleCloseA2A}
+        id={id}
       />
     </div>
   );
