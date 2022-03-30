@@ -5,11 +5,11 @@ import MainComponent from "../page-components/MainComponent";
 
 export default function DetailPage(props) {
   const { id } = props;
-  const image = data.find((item) => item.id === id);
+  const { pictureUrl = "" } = data.filter((item) => item.id == id)[0];
   return (
     <>
       <Head>
-        <meta property="og:image" content={image?.pictureUrl} />
+        <meta property="og:image" content={pictureUrl} />
         {/* <!-- Go to www.addthis.com/dashboard to customize your tools --> */}
         <link
           rel="stylesheet"
