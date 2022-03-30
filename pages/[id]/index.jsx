@@ -1,15 +1,15 @@
 import React from "react";
 import Head from "next/head";
-import imageData from "../../data/detailData";
+import data from "../../data/data";
 import MainComponent from "../page-components/MainComponent";
 
 export default function DetailPage(props) {
-  const { query: { id = 1 } = {} } = props;
-
+  const { id } = props;
+  const image = data.find((item) => item.id === id);
   return (
     <>
       <Head>
-        <meta property="og:image" content={imageData[id]} />
+        <meta property="og:image" content={image?.pictureUrl} />
         {/* <!-- Go to www.addthis.com/dashboard to customize your tools --> */}
         <link
           rel="stylesheet"
@@ -40,10 +40,11 @@ export default function DetailPage(props) {
 
 export async function getServerSideProps(context) {
   const { query } = context;
-
+  const { id } = query;
   return {
     props: {
       query,
+      id,
     },
   };
 }
