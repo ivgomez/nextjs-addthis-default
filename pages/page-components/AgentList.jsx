@@ -27,7 +27,7 @@ const AgentList = () => {
   return (
     <AgentWrapper>
       <h1>Agents</h1>
-      <List>
+      {/* <List>
         {data.map((element) => (
           <AgentElement key={element.id}>
             <TextWrapper>
@@ -46,7 +46,7 @@ const AgentList = () => {
             </div>
           </AgentElement>
         ))}
-      </List>
+      </List> */}
     </AgentWrapper>
   );
 };
