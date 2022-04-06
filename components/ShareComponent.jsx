@@ -31,12 +31,32 @@ function ShareComponent(props) {
   //const router = useRouter();
   //const [objData, setObjData] = useState({});
 
+  const setAddthisConfig = () => {
+    // eslint-disable-next-line no-undef
+    if (
+      (typeof addthis_share != "undefined" && addthis_share != null) ||
+      window.addthis_share
+    ) {
+      window.addthis?.update(
+        "share",
+        "media",
+        "https://res.cloudinary.com/corcoran-dryrmqrbg/image/upload/q_auto,f_auto/v1567544323/static-images/default-building-image.jpg"
+      );
+    }
+  };
+
+  // useEffect(() => {
+  //   setAddthisConfig();
+  //   // eslint-disable-next-line react-hooks/exhaustive-deps
+  // }, []);
+
   var a2a_config = a2a_config || {};
   a2a_config.templates = a2a_config.templates || {};
 
   const addthisViewEvent = () => {
     if (window?.addthis) {
       window.addthis.toolbox(".addthis_sharing_toolbox");
+      setAddthisConfig();
       // window.addthis_share.media =
       //   "https://mediarouting.vestahub.com/Media/93962490/box/500x500";
     }

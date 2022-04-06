@@ -12,25 +12,6 @@ const AgentList = () => {
   const [openA2A, setOpenA2A] = useState(false);
   const [openST, setOpenST] = useState(false);
 
-  const setAddthisConfig = () => {
-    // eslint-disable-next-line no-undef
-    if (
-      (typeof addthis_share != "undefined" && addthis_share != null) ||
-      window.addthis_share
-    ) {
-      window.addthis?.update(
-        "share",
-        "media",
-        "https://res.cloudinary.com/corcoran-dryrmqrbg/image/upload/q_auto,f_auto/v1567544323/static-images/default-building-image.jpg"
-      );
-    }
-  };
-
-  useEffect(() => {
-    setAddthisConfig();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
-
   const handleOpenAddthis = () => {
     setOpen(true);
     //addthis.update("share", "url", "http://www.example.com");
