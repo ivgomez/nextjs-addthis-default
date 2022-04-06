@@ -31,19 +31,19 @@ function ShareComponent(props) {
   //const router = useRouter();
   //const [objData, setObjData] = useState({});
 
-  const setAddthisConfig = () => {
-    // eslint-disable-next-line no-undef
-    if (
-      (typeof addthis_share != "undefined" && addthis_share != null) ||
-      window.addthis_share
-    ) {
-      window.addthis?.update(
-        "share",
-        "media",
-        "https://res.cloudinary.com/corcoran-dryrmqrbg/image/upload/q_auto,f_auto/v1567544323/static-images/default-building-image.jpg"
-      );
-    }
-  };
+  // const setAddthisConfig = () => {
+  //   // eslint-disable-next-line no-undef
+  //   if (
+  //     (typeof addthis_share != "undefined" && addthis_share != null) ||
+  //     window.addthis_share
+  //   ) {
+  //     window.addthis.update(
+  //       "share",
+  //       "media",
+  //       "https://res.cloudinary.com/corcoran-dryrmqrbg/image/upload/q_auto,f_auto/v1567544323/static-images/default-building-image.jpg"
+  //     );
+  //   }
+  // };
 
   // useEffect(() => {
   //   setAddthisConfig();
@@ -56,7 +56,11 @@ function ShareComponent(props) {
   const addthisViewEvent = () => {
     if (window?.addthis) {
       window.addthis.toolbox(".addthis_sharing_toolbox");
-      setAddthisConfig();
+      window.addthis.update(
+        "share",
+        "media",
+        "https://res.cloudinary.com/corcoran-dryrmqrbg/image/upload/q_auto,f_auto/v1567544323/static-images/default-building-image.jpg"
+      );
       // window.addthis_share.media =
       //   "https://mediarouting.vestahub.com/Media/93962490/box/500x500";
     }
@@ -71,9 +75,14 @@ function ShareComponent(props) {
     }
   };
 
-  useEffect(() => {
-    addthisViewEvent();
-  }, [open, openA2A, openST, customA2A]);
+  useEffect(
+    () => {
+      addthisViewEvent();
+    },
+    [
+      /*open, openA2A, openST, customA2A*/
+    ]
+  );
 
   useEffect(() => {
     if (customA2A) {
