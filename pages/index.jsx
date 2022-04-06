@@ -7,11 +7,6 @@ export default function Home() {
     <>
       <Head>
         <title>Home</title>
-        <script
-          type="text/javascript"
-          src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-61c0a46123531ab8"
-          async="async"
-        ></script>
       </Head>
       <AgentList />
     </>

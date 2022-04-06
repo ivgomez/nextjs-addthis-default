@@ -1,5 +1,5 @@
 /* eslint-disable react-hooks/exhaustive-deps */
-import React, { /*useState, */ useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import styled from "styled-components";
 import { breakpoint } from "./theme";
@@ -10,9 +10,9 @@ import FacebookShareLink from "../pages/images/FacebookShareLink";
 import MessengerShareLink from "../pages/images/MessengerShareLink";
 import TelegramShareLink from "../pages/images/TelegramShareLink";
 import SMSShareLink from "../pages/images/SMSShareLink";
-//import { useRouter } from "next/router";
+import { useRouter } from "next/router";
 import Image from "next/image";
-//import data from "../data/data";
+import data from "../data/data";
 
 function ShareComponent(props) {
   const {
@@ -26,29 +26,10 @@ function ShareComponent(props) {
     handleCloseAddthis,
     handleOpenA2A,
     handleCloseA2A,
-    //id,
+    id,
   } = props;
-  //const router = useRouter();
-  //const [objData, setObjData] = useState({});
-
-  // const setAddthisConfig = () => {
-  //   // eslint-disable-next-line no-undef
-  //   if (
-  //     (typeof addthis_share != "undefined" && addthis_share != null) ||
-  //     window.addthis_share
-  //   ) {
-  //     window.addthis.update(
-  //       "share",
-  //       "media",
-  //       "https://res.cloudinary.com/corcoran-dryrmqrbg/image/upload/q_auto,f_auto/v1567544323/static-images/default-building-image.jpg"
-  //     );
-  //   }
-  // };
-
-  // useEffect(() => {
-  //   setAddthisConfig();
-  //   // eslint-disable-next-line react-hooks/exhaustive-deps
-  // }, []);
+  const router = useRouter();
+  const [objData, setObjData] = useState({});
 
   var a2a_config = a2a_config || {};
   a2a_config.templates = a2a_config.templates || {};
@@ -56,11 +37,6 @@ function ShareComponent(props) {
   const addthisViewEvent = () => {
     if (window?.addthis) {
       window.addthis.toolbox(".addthis_sharing_toolbox");
-      window.addthis.update(
-        "share",
-        "media",
-        "https://res.cloudinary.com/corcoran-dryrmqrbg/image/upload/q_auto,f_auto/v1567544323/static-images/default-building-image.jpg"
-      );
       // window.addthis_share.media =
       //   "https://mediarouting.vestahub.com/Media/93962490/box/500x500";
     }
@@ -75,14 +51,9 @@ function ShareComponent(props) {
     }
   };
 
-  useEffect(
-    () => {
-      addthisViewEvent();
-    },
-    [
-      /*open, openA2A, openST, customA2A*/
-    ]
-  );
+  useEffect(() => {
+    addthisViewEvent();
+  }, [open, openA2A, openST, customA2A]);
 
   useEffect(() => {
     if (customA2A) {
@@ -90,17 +61,17 @@ function ShareComponent(props) {
     }
   }, [customA2A]);
 
-  // useEffect(() => {
-  //   if (id) {
-  //     const obj = data.filter((element) => element.id == id)[0];
-  //     setObjData(obj);
-  //   }
-  // }, [id]);
+  useEffect(() => {
+    if (id) {
+      const obj = data.filter((element) => element.id == id)[0];
+      setObjData(obj);
+    }
+  }, [id]);
 
   return (
     <div style={{ width: "90%", margin: "0 auto" }}>
       <h1>SHARE BUTTONS LIBRARIES - EXAMPLES FOR REACT JS/NEXT.js</h1>
-      {/* <div style={{ textAlign: "center" }}>
+      <div style={{ textAlign: "center" }}>
         {objData?.pictureUrl && (
           <span>
             <ImageWrapper
@@ -117,7 +88,7 @@ function ShareComponent(props) {
             Click here to go back
           </button>
         </div>
-      </div> */}
+      </div>
 
       <div style={{ display: "block" }}>
         <div style={{ display: "block" }}>
